@@ -25,14 +25,35 @@
                 document.body.appendChild(button)
                 button.appendChild(buttonText)
 
+                // this is not working...:(
+                let boxes = document.getElementsByTagName('input')
+                
                 button.onclick = function()
                 {
-                    firstTextBox.value = "h"
-                    lastTextBox.value = "w"
-                    
-                    
-                }
+                    // I think we should approach smth like this..but should figure it out not working
+                    // boxes/value might be wrong
+                    if('firstTextBox.value'.charCodeAt(0) > 'A'.charCodeAt(0)) // i should put '<', but if that, then it's not working
+                    {
+                        console.log(firstTextBox.value)
+                        alert("wrong")
+                        firstTextBox.style.backgroundColor = "pink"
+                        lastTextBox.style.backgroundColor = "pink"
+                        firstTextBox.focus()
+                        lastTextBox.focus()
+                    }
+                    else if('boxes.value'.charCodeAt(0) > 'Z'.charCodeAt(0))
+                    {
+                        alert("wrong")
+                        firstTextBox.style.backgroundColor = "blue"
+                        boxes.focus()
+                    }
 
+                    else if('document.getElementById("first").value'.charCodeAt(0) > 'document.getElementById("last").value'.charCodeAt(0))
+                    {
+                        alert("wrong order")
+                        input.style.backgroundColor = "yellow"
+                    }
+                }
 
 
 
