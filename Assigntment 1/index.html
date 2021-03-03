@@ -3,7 +3,43 @@
     <head>
         <title>Assignment 1</title>
         <meta charset="UTF-8">
-        <script></script>
+        <script>
+            window.onload = function()
+            {
+                var firstTextBox = document.createElement("input")
+                firstTextBox.id = "first"
+                firstTextBox.type = "text"
+
+                var lastTextBox = document.createElement("input")
+                lastTextBox.id = "last"
+                lastTextBox.type = "text"
+
+                var button= document.createElement("button")
+                button.id = "go"
+                button.value = "Go"
+
+                var buttonText = document.createTextNode("Go")
+                
+                document.body.appendChild(firstTextBox)
+                document.body.appendChild(lastTextBox)
+                document.body.appendChild(button)
+                button.appendChild(buttonText)
+
+                button.onclick = function()
+                {
+                    firstTextBox.value = "h"
+                    lastTextBox.value = "w"
+                    
+                    
+                }
+
+
+
+
+            }
+
+
+        </script>
     </head>
     <body>
     </body>
