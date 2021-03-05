@@ -35,10 +35,11 @@
                     var lastText = document.getElementById('last').value
                     
                     var firstLetter = firstText.toLowerCase()
-                    if(firstLetter >= 'a' && firstLetter <= 'z') 
+                    if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1) 
                     {
                         
                     }
+                    
                     else if(firstLetter == "")
                     {
                         alert("wrong")
@@ -55,7 +56,7 @@
 
                     
                     var lastLetter = lastText.toLowerCase()
-                    if(lastLetter >= 'a' && lastLetter <= 'z') 
+                    if(lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
                     {
                         
                     }
@@ -71,6 +72,7 @@
                         lastTextBox.style.backgroundColor = "pink"
                         lastTextBox.focus()
                     }
+                    
                     
                 }
 
