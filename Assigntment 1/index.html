@@ -9,21 +9,22 @@
                 var firstTextBox = document.createElement("input")
                 firstTextBox.id = "first"
                 firstTextBox.type = "text"
+                document.body.appendChild(firstTextBox)
+
+                document.body.appendChild(document.createElement("br"))
 
                 var lastTextBox = document.createElement("input")
                 lastTextBox.id = "last"
                 lastTextBox.type = "text"
+                document.body.appendChild(lastTextBox)
 
-                var button= document.createElement("button")
+                document.body.appendChild(document.createElement("br"))
+
+                var button= document.createElement("input")
+                button.type = "button"
                 button.id = "go"
                 button.value = "Go"
-
-                var buttonText = document.createTextNode("Go")
-                
-                document.body.appendChild(firstTextBox)
-                document.body.appendChild(lastTextBox)
                 document.body.appendChild(button)
-                button.appendChild(buttonText)
 
                 // this is not working...:(
                 let boxes = document.getElementsByTagName('input')
