@@ -34,35 +34,44 @@
                     var firstText = document.getElementById('first').value
                     var lastText = document.getElementById('last').value
                     
-                    for(let i = 0; i < firstText.length; i++)
+                    var firstLetter = firstText.toLowerCase()
+                    if(firstLetter >= 'a' && firstLetter <= 'z') 
                     {
-                        var firstLetter = firstText[i].toLowerCase()
-                        if(firstLetter >= 'a' && firstLetter <= 'z') 
-                        {
-                            
-                        }
-                        else
-                        {
-                            alert("wrong")
-                            firstTextBox.style.backgroundColor = "pink"
-                            firstTextBox.focus()
-                        }
+                        
                     }
+                    else if(firstLetter == "")
+                    {
+                        alert("wrong")
+                        firstTextBox.style.backgroundColor = "pink"
+                        firstTextBox.focus()
+                    }
+                    else
+                    {
+                        alert("wrong")
+                        firstTextBox.style.backgroundColor = "pink"
+                        firstTextBox.focus()
+                    }
+                    
 
-                    for(let i = 0; i < lastText.length; i++)
+                    
+                    var lastLetter = lastText.toLowerCase()
+                    if(lastLetter >= 'a' && lastLetter <= 'z') 
                     {
-                        var lastLetter = lastText[i].toLowerCase()
-                        if(lastLetter >= 'a' && lastLetter <= 'z') 
-                        {
-                            
-                        }
-                        else
-                        {
-                            alert("wrong")
-                            lastTextBox.style.backgroundColor = "pink"
-                            lastTextBox.focus()
-                        }
+                        
                     }
+                    else if(lastLetter == "")
+                    {
+                        alert("wrong")
+                        lastTextBox.style.backgroundColor = "pink"
+                        lastTextBox.focus()
+                    }
+                    else
+                    {
+                        alert("wrong")
+                        lastTextBox.style.backgroundColor = "pink"
+                        lastTextBox.focus()
+                    }
+                    
                 }
 
 
