@@ -73,7 +73,12 @@
                         lastTextBox.focus()
                     }
                     
-                    
+                    if(firstLetter > lastLetter)
+                    {
+                        alert("wrong order")
+                        firstTextBox.style.backgroundColor = "yellow"
+                        lastTextBox.style.backgroundColor = "yellow"
+                    }
                 }
 
 
