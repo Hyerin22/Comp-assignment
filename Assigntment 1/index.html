@@ -30,29 +30,38 @@
                 let boxes = document.getElementsByTagName('input')
                 
                 button.onclick = function()
-                {
-                    // I think we should approach smth like this..but should figure it out not working
-                    // boxes/value might be wrong
-                    if('firstTextBox.value'.charCodeAt(0) > 'A'.charCodeAt(0)) // i should put '<', but if that, then it's not working
+                {   
+                    var firstText = document.getElementById('first').value
+                    var lastText = document.getElementById('last').value
+                    
+                    for(let i = 0; i < firstText.length; i++)
                     {
-                        console.log(firstTextBox.value)
-                        alert("wrong")
-                        firstTextBox.style.backgroundColor = "pink"
-                        lastTextBox.style.backgroundColor = "pink"
-                        firstTextBox.focus()
-                        lastTextBox.focus()
-                    }
-                    else if('boxes.value'.charCodeAt(0) > 'Z'.charCodeAt(0))
-                    {
-                        alert("wrong")
-                        firstTextBox.style.backgroundColor = "blue"
-                        boxes.focus()
+                        var firstLetter = firstText[i].toLowerCase()
+                        if(firstLetter >= 'a' && firstLetter <= 'z') 
+                        {
+                            
+                        }
+                        else
+                        {
+                            alert("wrong")
+                            firstTextBox.style.backgroundColor = "pink"
+                            firstTextBox.focus()
+                        }
                     }
 
-                    else if('document.getElementById("first").value'.charCodeAt(0) > 'document.getElementById("last").value'.charCodeAt(0))
+                    for(let i = 0; i < lastText.length; i++)
                     {
-                        alert("wrong order")
-                        input.style.backgroundColor = "yellow"
+                        var lastLetter = lastText[i].toLowerCase()
+                        if(lastLetter >= 'a' && lastLetter <= 'z') 
+                        {
+                            
+                        }
+                        else
+                        {
+                            alert("wrong")
+                            lastTextBox.style.backgroundColor = "pink"
+                            lastTextBox.focus()
+                        }
                     }
                 }
 
