@@ -6,6 +6,7 @@
         <script>
             window.onload = function()
             {
+                // part 2
                 var firstTextBox = document.createElement("input")
                 firstTextBox.id = "first"
                 firstTextBox.type = "text"
@@ -26,18 +27,46 @@
                 button.value = "Go"
                 document.body.appendChild(button)
 
-                // this is not working...:(
+                
                 let boxes = document.getElementsByTagName('input')
                 
                 button.onclick = function()
                 {   
+                    // part 3
                     var firstText = document.getElementById('first').value
                     var lastText = document.getElementById('last').value
                     
                     var firstLetter = firstText.toLowerCase()
+
                     if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1) 
                     {
+                        //remove all
+                        // var firstDiv = document.getElementById("top")
+                        // firstDiv.remove()
+                        // var secondDiv = document.getElementById("middle")
+                        // secondDiv.remove()
+                        // var thirdDiv = document.getElementById("bottom")
+                        // thirdDiv.remove()
                         
+                        //create new three div
+                        for(let i = 'a'; i <= 'z'; i++)
+                        {
+                            let firstImage = document.createElement("img")
+                            firstImage.src = "../images/" + firstLetter + ".png"
+                            firstImage.width = 100
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+                            document.getElementById("top").appendChild(firstImage)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+                        }
                     }
                     
                     else if(firstLetter == "")
@@ -58,7 +87,33 @@
                     var lastLetter = lastText.toLowerCase()
                     if(lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
                     {
+                        //remove all
+                        // var firstDiv = document.getElementById("top")
+                        // firstDiv.remove()
+                        // var secondDiv = document.getElementById("middle")
+                        // secondDiv.remove()
+                        // var thirdDiv = document.getElementById("bottom")
+                        // thirdDiv.remove()
                         
+                        //create new three div
+                        for(let i = 'a'; i <= 'z'; i++)
+                        {
+                            let lastImage = document.createElement("img")
+                            lastImage.src = "../images/" + lastLetter + ".png"
+                            lastImage.width = 100
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+                            document.getElementById("top").appendChild(lastImage)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+                        }
                     }
                     else if(lastLetter == "")
                     {
@@ -73,6 +128,7 @@
                         lastTextBox.focus()
                     }
                     
+                    // part 4
                     if(firstLetter > lastLetter)
                     {
                         alert("wrong order")
