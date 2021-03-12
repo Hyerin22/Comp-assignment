@@ -32,27 +32,23 @@
                 
                 button.onclick = function()
                 {   
-                    // part 3
                     var firstText = document.getElementById('first').value
                     var lastText = document.getElementById('last').value
                     
+                    // part 3
                     var firstLetter = firstText.toLowerCase()
+                    var lastLetter = lastText.toLowerCase()
+
+                    
 
                     if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1) 
                     {
-                        //remove all
-                        // var firstDiv = document.getElementById("top")
-                        // firstDiv.remove()
-                        // var secondDiv = document.getElementById("middle")
-                        // secondDiv.remove()
-                        // var thirdDiv = document.getElementById("bottom")
-                        // thirdDiv.remove()
-                        
                         //create new three div
-                        for(let i = 'a'; i <= 'z'; i++)
+                        for(let i = firstText.charCodeAt(0); i <= lastText.charCodeAt(0); i++)
                         {
+                            let myLetter = String.fromCharCode(i)
                             let firstImage = document.createElement("img")
-                            firstImage.src = "../images/" + firstLetter + ".png"
+                            firstImage.src = "../images/" + myLetter + ".png"
                             firstImage.width = 100
                             var topDiv = document.createElement("div")
                             topDiv.id = "top"
@@ -66,7 +62,24 @@
                             var bottomDiv = document.createElement("div")
                             bottomDiv.id = "bottom"
                             document.body.appendChild(bottomDiv)
+
                         }
+                        //remove all
+                        // var firstDiv = document.getElementById("top")
+                        // firstDiv.remove()
+                        // var secondDiv = document.getElementById("middle")
+                        // secondDiv.remove()
+                        // var thirdDiv = document.getElementById("bottom")
+                        // thirdDiv.remove()
+
+                        // var allDivs = document.getElementsByName("div")
+                        // for(let i = allDivs.length - 1; i >= 0; i--)
+                        // {
+                        //     allDivs[i].parentNode.removeChild(allDivs[i])
+                        // }
+                        
+                        
+                        
                     }
                     
                     else if(firstLetter == "")
@@ -94,26 +107,28 @@
                         // secondDiv.remove()
                         // var thirdDiv = document.getElementById("bottom")
                         // thirdDiv.remove()
+
+                        // //create new three div
+                        // for(let i = 'a'; i <= 'z'; i++)
+                        // {
+                            
+                        //     let lastImage = document.createElement("img")
+                        //     lastImage.src = "../images/" + lastLetter + ".png"
+                        //     lastImage.width = 100
+                        //     var topDiv = document.createElement("div")
+                        //     topDiv.id = "top"
+                        //     document.body.appendChild(topDiv)
+                        //     document.getElementById("top").appendChild(lastImage)
+
+                        //     var middleDiv = document.createElement("div")
+                        //     middleDiv.id = "middle"
+                        //     document.body.appendChild(middleDiv)
+
+                        //     var bottomDiv = document.createElement("div")
+                        //     bottomDiv.id = "bottom"
+                        //     document.body.appendChild(bottomDiv)
+                        // }
                         
-                        //create new three div
-                        for(let i = 'a'; i <= 'z'; i++)
-                        {
-                            let lastImage = document.createElement("img")
-                            lastImage.src = "../images/" + lastLetter + ".png"
-                            lastImage.width = 100
-                            var topDiv = document.createElement("div")
-                            topDiv.id = "top"
-                            document.body.appendChild(topDiv)
-                            document.getElementById("top").appendChild(lastImage)
-
-                            var middleDiv = document.createElement("div")
-                            middleDiv.id = "middle"
-                            document.body.appendChild(middleDiv)
-
-                            var bottomDiv = document.createElement("div")
-                            bottomDiv.id = "bottom"
-                            document.body.appendChild(bottomDiv)
-                        }
                     }
                     else if(lastLetter == "")
                     {
@@ -139,6 +154,7 @@
 
 
 
+                
             }
 
 
