@@ -39,109 +39,61 @@
                     var firstLetter = firstText.toLowerCase()
                     var lastLetter = lastText.toLowerCase()
 
+                    var topDiv = document.createElement("div")
+                    topDiv.id = "top"
+                    document.body.appendChild(topDiv)
                     
 
-                    if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1) 
-                    {
-                        //create new three div
-                        for(let i = firstText.charCodeAt(0); i <= lastText.charCodeAt(0); i++)
+                    var middleDiv = document.createElement("div")
+                    middleDiv.id = "middle"
+                    document.body.appendChild(middleDiv)
+
+                    var bottomDiv = document.createElement("div")
+                    bottomDiv.id = "bottom"
+                    document.body.appendChild(bottomDiv)
+
+                    
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
                         {
-                            let myLetter = String.fromCharCode(i)
-                            let firstImage = document.createElement("img")
-                            firstImage.src = "../images/" + myLetter + ".png"
-                            firstImage.width = 100
-                            var topDiv = document.createElement("div")
-                            topDiv.id = "top"
-                            document.body.appendChild(topDiv)
-                            document.getElementById("top").appendChild(firstImage)
-
-                            var middleDiv = document.createElement("div")
-                            middleDiv.id = "middle"
-                            document.body.appendChild(middleDiv)
-
-                            var bottomDiv = document.createElement("div")
-                            bottomDiv.id = "bottom"
-                            document.body.appendChild(bottomDiv)
-
-                        }
-                        //remove all
-                        // var firstDiv = document.getElementById("top")
-                        // firstDiv.remove()
-                        // var secondDiv = document.getElementById("middle")
-                        // secondDiv.remove()
-                        // var thirdDiv = document.getElementById("bottom")
-                        // thirdDiv.remove()
-
-                        // var allDivs = document.getElementsByName("div")
-                        // for(let i = allDivs.length - 1; i >= 0; i--)
-                        // {
-                        //     allDivs[i].parentNode.removeChild(allDivs[i])
-                        // }
-                        
-                        
-                        
-                    }
-                    
-                    else if(firstLetter == "")
-                    {
-                        alert("wrong")
-                        firstTextBox.style.backgroundColor = "pink"
-                        firstTextBox.focus()
-                    }
-                    else
-                    {
-                        alert("wrong")
-                        firstTextBox.style.backgroundColor = "pink"
-                        firstTextBox.focus()
-                    }
-                    
-
-                    
-                    var lastLetter = lastText.toLowerCase()
-                    if(lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
-                    {
-                        //remove all
-                        // var firstDiv = document.getElementById("top")
-                        // firstDiv.remove()
-                        // var secondDiv = document.getElementById("middle")
-                        // secondDiv.remove()
-                        // var thirdDiv = document.getElementById("bottom")
-                        // thirdDiv.remove()
-
-                        // //create new three div
-                        // for(let i = 'a'; i <= 'z'; i++)
-                        // {
                             
-                        //     let lastImage = document.createElement("img")
-                        //     lastImage.src = "../images/" + lastLetter + ".png"
-                        //     lastImage.width = 100
-                        //     var topDiv = document.createElement("div")
-                        //     topDiv.id = "top"
-                        //     document.body.appendChild(topDiv)
-                        //     document.getElementById("top").appendChild(lastImage)
+                            //remove all
+                            
+                            // var firstDiv = document.getElementById("top")
+                            // firstDiv.remove()
+                            // var secondDiv = document.getElementById("middle")
+                            // secondDiv.remove()
+                            // var thirdDiv = document.getElementById("bottom")
+                            // thirdDiv.remove()
 
-                        //     var middleDiv = document.createElement("div")
-                        //     middleDiv.id = "middle"
-                        //     document.body.appendChild(middleDiv)
+                            //create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                let myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.width = 100
 
-                        //     var bottomDiv = document.createElement("div")
-                        //     bottomDiv.id = "bottom"
-                        //     document.body.appendChild(bottomDiv)
-                        // }
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                        }
                         
-                    }
-                    else if(lastLetter == "")
-                    {
-                        alert("wrong")
-                        lastTextBox.style.backgroundColor = "pink"
-                        lastTextBox.focus()
-                    }
-                    else
-                    {
-                        alert("wrong")
-                        lastTextBox.style.backgroundColor = "pink"
-                        lastTextBox.focus()
-                    }
+                        else if(firstLetter == "" && lastLetter == "")
+                        {
+                            alert("wrong")
+                            firstTextBox.style.backgroundColor = "pink"
+                            firstTextBox.focus()
+                            lastTextBox.style.backgroundColor = "pink"
+                            lastTextBox.focus()
+                        }
+                        else
+                        {
+                            alert("wrong")
+                            firstTextBox.style.backgroundColor = "pink"
+                            firstTextBox.focus()
+                            lastTextBox.style.backgroundColor = "pink"
+                            lastTextBox.focus()
+                        }
                     
                     // part 4
                     if(firstLetter > lastLetter)
