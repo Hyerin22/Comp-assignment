@@ -101,6 +101,31 @@
                         firstTextBox.style.backgroundColor = "yellow"
                         lastTextBox.style.backgroundColor = "yellow"
                     }
+
+                    let clickedImage = document.getElementsByTagName("img")
+
+                    function moveMe () 
+                    {
+
+                        for(let i = 0; i < clickedImage.length; i++)
+                        {
+                            clickedImage[i].ondblclick = function() 
+                            {
+                                if(this.parentNode.id == "top" && this == clickedImage[0])
+                                {
+                                    document.getElementById('bottom').appendChild(clickedImage[0])
+                                }
+                                else
+                                {
+                                    this.parentNode.appendChild(clickedImage[0])
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    clickedImage.ondblclick = moveMe()
                 }
 
 
