@@ -99,29 +99,53 @@
                         firstTextBox.style.backgroundColor = "yellow"
                         lastTextBox.style.backgroundColor = "yellow"
                     }
-
+                    //double click
                     let clickedImage = document.getElementsByTagName("img")
 
-                    function moveMe () 
+                    function moveMe () {
+
+
+                    // THIS IS THE DOUBLE CLICKING PART
+                    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+                    for(let i = 0; i < clickedImage.length; i++)
                     {
-
-                        for(let i = 0; i < clickedImage.length; i++)
+                        clickedImage[i].ondblclick = function() 
                         {
-                            clickedImage[i].ondblclick = function() 
-                            {
-                                if(this.parentNode.id == "top" && this == clickedImage[0])
-                                {
-                                    document.getElementById('bottom').appendChild(clickedImage[0])
-                                }
-                                else
-                                {
-                                    this.parentNode.appendChild(clickedImage[0])
-                                }
 
-                            }
+                        // FOR TOP
+                        if(this.parentNode.id == "top" && this.previousSibling == null)
+                        {
+                            document.getElementById('bottom').appendChild(this)
                         }
 
+                        else if (this.parentNode.id == "top" && this.previousSibling != null && this.previousSibling != null)
+                        {
+                            this.parentNode.appendChild(clickedImage[0])
+                        }
+
+
+                        // FOR BOTTOM
+                        else if (this.parentNode.id == "bottom" && this.previousSibling == null)
+                        {
+                            document.getElementById('middle').appendChild(this)
+                        }
+
+
+                        // FOR MIDDLE
+                        else if(this.parentNode.id == "middle" && this.previousSibling == null)
+                        {
+                            document.getElementById('top').appendChild(this)
+                        }                        
+
+                        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                        }
                     }
+
+                    }
+                    clickedImage.ondblclick = moveMe()
+
+                    
 
                 }
 
