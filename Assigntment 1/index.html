@@ -68,6 +68,7 @@
                                 let myLetter = String.fromCharCode(i)
                                 let firstImage = document.createElement("img")
                                 firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
                                 firstImage.width = 100
 
                                 document.getElementById("top").appendChild(firstImage)
@@ -99,6 +100,7 @@
                         firstTextBox.style.backgroundColor = "yellow"
                         lastTextBox.style.backgroundColor = "yellow"
                     }
+
                     //double click
                     let clickedImage = document.getElementsByTagName("img")
 
@@ -142,16 +144,250 @@
                         }
                     }
 
-                    }
+                    } 
                     clickedImage.ondblclick = moveMe()
 
-                    
 
+                    function highlightimage(e)
+                    {
+                        if(e.which == 65)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('a').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 66)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('b').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 67)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('c').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 68)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('d').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 69)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('e').style.border = "red solid 5px"
+                            }
+                        }
+                        if(e.which == 70)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('f').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 71)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('g').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 72)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('h').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 73)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('i').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 74)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('j').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 75)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('k').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 76)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('l').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 77)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('m').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 78)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('n').style.border = "red solid 5px"
+                            }
+                        }
+                        
+                        if(e.which == 79)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('o').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 80)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('p').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 81)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('q').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 82)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('r').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 83)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('s').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 84)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('t').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 85)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('u').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 86)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('v').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 87)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('w').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 88)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('x').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 89)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('y').style.border = "red solid 5px"
+                            }
+                        }
+
+                        if(e.which == 90)
+                        {
+                            for(let i = 0; i < clickedImage.length; i++)
+                            {
+                                clickedImage[i].style.border = "none"
+                                document.getElementById('z').style.border = "red solid 5px"
+                            }
+                        }
+                        // alert(e.which)
+
+                    }
+
+                    window.onkeydown=highlightimage
                 }
-
-
-
-                
             }
 
 
