@@ -104,46 +104,46 @@
                     //double click
                     let clickedImage = document.getElementsByTagName("img")
 
-                    function moveMe () {
-
-
+                    function moveMe () 
+                    {
                     // THIS IS THE DOUBLE CLICKING PART
                     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-                    for(let i = 0; i < clickedImage.length; i++)
-                    {
-                        clickedImage[i].ondblclick = function() 
+                        for(let i = 0; i < clickedImage.length; i++)
                         {
+                            clickedImage[i].ondblclick = function() 
+                            {
 
-                        // FOR TOP
-                        if(this.parentNode.id == "top" && this.previousSibling == null)
-                        {
-                            document.getElementById('bottom').appendChild(this)
+                                // FOR TOP
+                                if(this.parentNode.id == "top" && this.previousSibling == null)
+                                {
+                                    document.getElementById('bottom').appendChild(this)
+                                }
+
+                                else if (this.parentNode.id == "top" && this.previousSibling != null && this.previousSibling != null)
+                                {
+                                    this.parentNode.appendChild(clickedImage[0])
+                                }
+
+
+                                // FOR BOTTOM
+                                else if (this.parentNode.id == "bottom" && this.previousSibling == null)
+                                {
+                                    document.getElementById('middle').appendChild(this)
+                                }
+
+
+                                // FOR MIDDLE
+                                else if(this.parentNode.id == "middle" && this.previousSibling == null)
+                                {
+                                    document.getElementById('top').appendChild(this)
+                                }                        
+
+                            // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                            }
+
+                            
                         }
-
-                        else if (this.parentNode.id == "top" && this.previousSibling != null && this.previousSibling != null)
-                        {
-                            this.parentNode.appendChild(clickedImage[0])
-                        }
-
-
-                        // FOR BOTTOM
-                        else if (this.parentNode.id == "bottom" && this.previousSibling == null)
-                        {
-                            document.getElementById('middle').appendChild(this)
-                        }
-
-
-                        // FOR MIDDLE
-                        else if(this.parentNode.id == "middle" && this.previousSibling == null)
-                        {
-                            document.getElementById('top').appendChild(this)
-                        }                        
-
-                        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-                        }
-                    }
-
                     } 
                     clickedImage.ondblclick = moveMe()
 
@@ -156,6 +156,25 @@
                             {
                                 clickedImage[i].style.border = "none"
                                 document.getElementById('a').style.border = "red solid 5px"
+                            }
+                        }
+                        else if(e.which == 37)
+                        {
+                            // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>this part<<<<<<<<<<<<<<<<<<< move left
+                        }
+                        else if(e.which == 40)
+                        {
+                            if(document.getElementById('a').parentNode.id == "top" && this.previousSibling == null)
+                            {
+                                document.getElementById('middle').appendChild(document.getElementById('a'))
+                            }
+                            else if(document.getElementById('a').parentNode.id == "middle" && this.previousSibling == null)
+                            {
+                                document.getElementById('bottom').appendChild(document.getElementById('a'))
+                            } 
+                            else if (document.getElementById('a').parentNode.id == "bottom" && this.previousSibling == null)
+                            {
+                                document.getElementById('top').appendChild(document.getElementById('a'))
                             }
                         }
 
@@ -383,10 +402,12 @@
                             }
                         }
                         // alert(e.which)
-
                     }
 
                     window.onkeydown=highlightimage
+
+                    
+
                 }
             }
 
