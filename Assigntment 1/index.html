@@ -175,262 +175,1528 @@
 
                     function highlightimage(e)
                     {
+
+
+                        // letter a
                         if(e.which == 65)
                         {
+
+                        var firstText = document.getElementById('first').value
+                        var lastText = document.getElementById('last').value
+                    
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
+                                
                             }
                             
                             document.getElementById('a').style.border = "red solid 5px"
-
                             document.getElementById('a').id = "down"
-
                         }
 
+
+
+                        // letter b
                         if(e.which == 66)
                         {
 
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
 
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
 
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            //create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
 
                             document.getElementById('b').style.border = "red solid 5px"
-
                             document.getElementById('b').id = "down"
                             
-
-
                         }
 
+
+                        // letter c
                         if(e.which == 67)
                         {
+
+                        var firstText = document.getElementById('first').value
+                        var lastText = document.getElementById('last').value
+                            
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            //create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('c').style.border = "red solid 5px"
-
                             document.getElementById('c').id = "down"
                         }
 
+
+
+                        // letter d
                         if(e.which == 68)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('d').style.border = "red solid 5px"
+                            document.getElementById('d').id = "down"
                         }
 
+
+
+
+                        // letter e
                         if(e.which == 69)
                         {
+
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('e').style.border = "red solid 5px"
+                            document.getElementById('e').id = "down"
                         }
+
+
+                        // letter f
                         if(e.which == 70)
                         {
+
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('f').style.border = "red solid 5px"
+                            document.getElementById('f').id = "down"
                         }
 
+                        // letter g
                         if(e.which == 71)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('g').style.border = "red solid 5px"
+                            document.getElementById('g').id = "down"
                         }
 
+
+                        // letter h
                         if(e.which == 72)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('h').style.border = "red solid 5px"
+                            document.getElementById('h').id = "down"
                         }
 
+
+                        // letter i
                         if(e.which == 73)
                         {
+
+                            var firstText = document.getElementById('first').value
+                        var lastText = document.getElementById('last').value
+                    
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('i').style.border = "red solid 5px"
+                            document.getElementById('i').id = "down"
                         }
 
+
+                        // letter j
                         if(e.which == 74)
                         {
+
+                            var firstText = document.getElementById('first').value
+                        var lastText = document.getElementById('last').value
+                    
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('j').style.border = "red solid 5px"
+                            document.getElementById('j').id = "down"
                         }
 
+
+
+
+                        // letter k
                         if(e.which == 75)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('k').style.border = "red solid 5px"
+                            document.getElementById('k').id = "down"
                         }
 
+
+                        // letter l
                         if(e.which == 76)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('l').style.border = "red solid 5px"
+                            document.getElementById('l').id = "down"
                         }
 
+
+                        // letter m
                         if(e.which == 77)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('m').style.border = "red solid 5px"
+                            document.getElementById('m').id = "down"
                         }
 
+
+                        // letter n
                         if(e.which == 78)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('n').style.border = "red solid 5px"
+                            document.getElementById('n').id = "down"
                         }
                         
+                        
+
+
+                        // letter 0
                         if(e.which == 79)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('o').style.border = "red solid 5px"
+                            document.getElementById('o').id = "down"
                         }
 
+
+                        // letter p
                         if(e.which == 80)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('p').style.border = "red solid 5px"
+                            document.getElementById('p').id = "down"
                         }
 
+
+                        // letter q
                         if(e.which == 81)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('q').style.border = "red solid 5px"
+                            document.getElementById('q').id = "down"
                         }
 
+
+                        // letter r
                         if(e.which == 82)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('r').style.border = "red solid 5px"
+                            document.getElementById('r').id = "down"
                         }
 
+
+                        // letter s
                         if(e.which == 83)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('s').style.border = "red solid 5px"
+                            document.getElementById('s').id = "down"
                         }
 
+
+                        // letter t
                         if(e.which == 84)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('t').style.border = "red solid 5px"
+                            document.getElementById('t').id = "down"
                         }
 
+
+                        // letter u
                         if(e.which == 85)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('u').style.border = "red solid 5px"
+                            document.getElementById('u').id = "down"
                         }
 
+
+                        // letter v
                         if(e.which == 86)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('v').style.border = "red solid 5px"
+                            document.getElementById('v').id = "down"
                         }
 
+
+                        // letter w
                         if(e.which == 87)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('w').style.border = "red solid 5px"
+                            document.getElementById('w').id = "down"
                         }
 
+
+                        // letter x
                         if(e.which == 88)
                         {
+
+                            var firstText = document.getElementById('first').value
+                        var lastText = document.getElementById('last').value
+                    
+                        // part 3
+                        var firstLetter = firstText.toLowerCase()
+                        var lastLetter = lastText.toLowerCase()
+
+                        if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                        {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('x').style.border = "red solid 5px"
+                            document.getElementById('x').id = "down"
                         }
 
+
+                        // letter y
                         if(e.which == 89)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('y').style.border = "red solid 5px"
+                            document.getElementById('y').id = "down"
                         }
 
+                        // letter z
                         if(e.which == 90)
                         {
+
+                            var firstText = document.getElementById('first').value
+                            var lastText = document.getElementById('last').value
+                    
+                            // part 3
+                            var firstLetter = firstText.toLowerCase()
+                            var lastLetter = lastText.toLowerCase()
+
+                            if(firstLetter >= 'a' && firstLetter <= 'z' && firstLetter.length == 1 && lastLetter >= 'a' && lastLetter <= 'z' && lastLetter.length == 1) 
+                            {
+                            
+                            
+
+                            var allDivs = document.getElementsByTagName('div')
+                            for(let i = allDivs.length - 1; i >= 0; i--)
+                            {
+                                allDivs[i].parentNode.removeChild(allDivs[i])
+                            }
+
+                            var topDiv = document.createElement("div")
+                            topDiv.id = "top"
+                            document.body.appendChild(topDiv)
+
+                            var middleDiv = document.createElement("div")
+                            middleDiv.id = "middle"
+                            document.body.appendChild(middleDiv)
+
+                            var bottomDiv = document.createElement("div")
+                            bottomDiv.id = "bottom"
+                            document.body.appendChild(bottomDiv)
+
+                            // create new three divs
+                            for(let i = firstText.charCodeAt(0); i <=  lastText.charCodeAt(0); i++)
+                            {
+                                myLetter = String.fromCharCode(i)
+                                let firstImage = document.createElement("img")
+                                firstImage.src = "../images/" + myLetter + ".png"
+                                firstImage.id = myLetter
+                                firstImage.width = 100
+
+                                document.getElementById("top").appendChild(firstImage)
+                            }
+                            
+                        }
+
                             for(let i = 0; i < clickedImage.length; i++)
                             {
                                 clickedImage[i].style.border = "none"
                             }
                             document.getElementById('z').style.border = "red solid 5px"
+                            document.getElementById('z').id = "down"
                         }
-                        // alert(e.which)
+
+
+                        // left key
                         if(e.which == 37)
                         {
+
                             if (document.getElementById('down').parentNode.id == "top" && document.getElementById('down').previousSibling != null && document.getElementById('down').previousSibling != null)
                                 {
                                     document.getElementById('down').parentNode.insertBefore(document.getElementById('down'), document.getElementById('down').previousSibling)
                                 }
+
+                            if (document.getElementById('down').parentNode.id == "middle" && document.getElementById('down').previousSibling != null && document.getElementById('down').previousSibling != null)
+                                {
+                                    document.getElementById('down').parentNode.insertBefore(document.getElementById('down'), document.getElementById('down').previousSibling)
+                                }
+
+                            if (document.getElementById('down').parentNode.id == "bottom" && document.getElementById('down').previousSibling != null && document.getElementById('down').previousSibling != null)
+                                {
+                                    document.getElementById('down').parentNode.insertBefore(document.getElementById('down'), document.getElementById('down').previousSibling)
+                                }
                         }
-                        down = document.getElementById('down')
                         
                         if(e.which == 40)
                         {
@@ -457,23 +1723,6 @@
                                     document.getElementById('top').appendChild(document.getElementById('down'))
                                 }  
                                 
-                            
-                               
-                            // if(document.getElementById('down').parentNode.id == "top" && this.previousSibling == null)
-                            // {
-                            //     document.getElementById('middle').appendChild(document.getElementById('down'))
-                            // }
-
-                            // else if(document.getElementById('down').parentNode.id == "middle" && this.previousSibling == null)
-                            // {
-                            //     document.getElementById('bottom').appendChild(document.getElementById('down'))
-                            // } 
-
-                            // else if (document.getElementById('down').parentNode.id == "bottom" && this.previousSibling == null)
-                            // {
-                            //     document.getElementById('top').appendChild(document.getElementById('down'))
-                            // }
-                            
                         }
                     }
 
